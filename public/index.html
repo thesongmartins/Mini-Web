@@ -13,16 +13,30 @@
   </head>
   <body>
     <header>
+      <!-- Navigation Bar -->
       <nav
         class="bg-gray-800 p-3 flex flex-col md:flex-row align-center justify-between relative"
       >
         <div><h1 class="font-bold text-yellow-600">Mini Web</h1></div>
 
-        <span class="flex cursor-pointer absolute right-5 top-3 md:hidden">
-          <i class="fa-solid fa-bars" onclick="menu(this)"></i>
-          <i class="fa-solid fa-xmark" onclick="menu(this)"></i>
+        <!-- Hamburger Button -->
+        <span class="flex cursor-pointer absolute right-5 top-3 z-50 md:hidden">
+          <i
+            id="menu-open"
+            class="fa-solid fa-bars block"
+            onclick="toggleMenu()"
+          ></i>
+          <i
+            id="menu-close"
+            class="fa-solid fa-xmark hidden"
+            onclick="toggleMenu()"
+          ></i>
         </span>
+        <!-- End of Hamburger  -->
+
+        <!-- Begining of Nav-Links -->
         <ul
+          id="menu-items"
           class="flex flex-col text-center md:mt-0 md:mr-10 md:flex-row gap-10 text-white"
         >
           <li>
@@ -51,8 +65,12 @@
             >
           </li>
         </ul>
+        <!-- End of Nav-Links -->
       </nav>
+      <!-- End of Navigation bar -->
     </header>
+
+    <!-- Hero Section -->
     <main
       class="bg-[url('./assets/background-image.jpg')] bg-blend-lighten dark:bg-slate-700 bg-cover bg-center h-52 md:h-screen"
     >
@@ -68,7 +86,8 @@
         </button>
       </div>
     </main>
-
+    <!-- End of Hero Section -->
+    <!-- Services Section  -->
     <section class="text-center m-4">
       <h2 class="font-bold text-4xl mt-10 p-4">Services</h2>
       <p class="text-gray-400 text-sm mb-10">Lorem ipsum dolor sit amet.</p>
@@ -133,7 +152,9 @@
         </div>
       </div>
     </section>
+    <!-- End of services Section -->
 
+    <!-- Portfolio Section -->
     <main class="bg-gray-100">
       <section class="portfolio mt-10 p-2">
         <h2 class="text-center font-bold text-3xl pt-5 mt-5">PORTFOLIO</h2>
@@ -211,7 +232,9 @@
           </div>
         </div>
       </section>
+      <!-- End of Portfolio Section -->
 
+      <!-- Team Section  -->
       <section class="Team m-4 md:p-20">
         <div>
           <h3 class="text-center font-bold text-4xl">Our Amazing Team</h3>
@@ -262,7 +285,13 @@
         </div>
       </section>
     </main>
+    <!-- End of team section -->
+
+    <!-- Hr -->
     <hr class="border-black" />
+    <!-- End of Hr -->
+
+    <!-- Footer Section  -->
     <footer class="text-center p-5">
       <p>
         Copyright &copy; 2020. Coded BY
@@ -273,5 +302,6 @@
         >
       </p>
     </footer>
+    <!-- End of footer section -->
   </body>
 </html>

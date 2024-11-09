@@ -1,7 +1,14 @@
 const { list } = require("postcss");
 
-function menu(e) {
-    let list = documet.querySelector('ul');
+function toggleMenu() {
+    const menuItems = document.getElementById('menu-items');
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
 
-    e.class === "fa-bars" ? (e.class = " fa-xmark", list.classlist.add("hidden"), list.classlist.add('text-center')) : (e.class = "fa-bars", list.classlist.remove('flex-col'), list.classlist.remove());
+    menuItems.classList.toggle('hidden');
+    menuOpen.classList.toggle('hidden');
+    menuClose.classList.toggle('hidden');
 }
+
+// Add event listener to the menu toggle button
+document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
