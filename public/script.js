@@ -1,12 +1,7 @@
-const menu = document.querySelector('menu');
+const { list } = require("postcss");
 
-const open = function () {
-    menu.classList.remove('hidden');
-    console.log('Button clicked');
-}
+function menu(e) {
+    let list = documet.querySelector('ul');
 
-const closeMenu = function () {
-    menu.classList.add('hidden');
+    e.class === "fa-bars" ? (e.class = " fa-xmark", list.classlist.add("hidden"), list.classlist.add('text-center')) : (e.class = "fa-bars", list.classlist.remove('flex-col'), list.classlist.remove());
 }
-menu.addEventListener('click', open);
-menu.addEventListener('click', closeMenu);
