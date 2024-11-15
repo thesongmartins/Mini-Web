@@ -1,14 +1,15 @@
 const { list } = require("postcss");
 
-function toggleMenu() {
-    const menuItems = document.getElementById('menu-items');
-    const menuOpen = document.getElementById('menu-open');
-    const menuClose = document.getElementById('menu-close');
+let nav = document.querySelector('.nav');
+let btn = document.querySelector('.toggle');
+let icon = btn.querySelector('.fa-bars');
 
-    menuItems.classList.toggle('hidden');
-    menuOpen.classList.toggle('hidden');
-    menuClose.classList.toggle('hidden');
-}
-
-// Add event listener to the menu toggle button
-document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+btn.addEventListener('click', () => {
+    if (icon.classList.contains('fa')) {
+        nav.classList.remove('hidden');
+        icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+        nav.classList.add('hidden');
+    }
+})

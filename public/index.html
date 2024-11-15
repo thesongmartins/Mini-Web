@@ -20,24 +20,17 @@
         <div><h1 class="font-bold text-yellow-600">Mini Web</h1></div>
 
         <!-- Hamburger Button -->
-        <span class="flex cursor-pointer absolute right-5 top-3 z-50 md:hidden">
-          <i
-            id="menu-open"
-            class="fa-solid fa-bars block"
-            onclick="toggleMenu()"
-          ></i>
-          <i
-            id="menu-close"
-            class="fa-solid fa-xmark hidden"
-            onclick="toggleMenu()"
-          ></i>
+        <span
+          class="toggle flex cursor-pointer absolute right-5 top-3 z-50 md:hidden"
+        >
+          <i class="fa-solid fa-bars"></i>
         </span>
+
         <!-- End of Hamburger  -->
 
         <!-- Begining of Nav-Links -->
         <ul
-          id="menu-items"
-          class="flex flex-col text-center md:mt-0 md:mr-10 md:flex-row gap-10 text-white"
+          class="nav hidden md:flex text-center md:mt-0 md:mr-10 md:flex-row gap-10 text-white"
         >
           <li>
             <a href="#" class="active:text-yellow-700 hover:text-yellow-400"
@@ -87,6 +80,7 @@
       </div>
     </main>
     <!-- End of Hero Section -->
+
     <!-- Services Section  -->
     <section class="text-center m-4">
       <h2 class="font-bold text-4xl mt-10 p-4">Services</h2>
